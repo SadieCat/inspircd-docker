@@ -20,7 +20,7 @@ jobs:
       - name: Prepare environment
         run: |
           sudo apt-get -qq update
-          sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+          sudo apt-get -y -o Dpkg::Options::="--force-confnew" install moby-engine moby-cli
           sudo apt-get install -y openssl parallel
 
       - name: Build container
